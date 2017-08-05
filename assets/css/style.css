@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box
+} 
+
+.allImages{
+	margin: 2% 0% 2% 0%;
+}
+
+.buttonWidth{
+	display: block;
+	width: 100%;
+}
+
+.textFix{
+	font-size: 24px;
+	text-align: center;
+}
+
+.hidden{
+	display: none;
+}
+
+.img-thumbnail{
+	border: 0px;
+}
