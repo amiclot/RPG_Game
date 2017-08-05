@@ -1,96 +1,134 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>RPG Game</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <title>RPG Game</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-	<div class = "container">
+  <div class = "container">
 
-		<div class ="row startGameContainer">
+    <div class ="row startGameContainer">
 
-			<div class ="col-xs-12">
+      <div class ="col-xs-12">
 
-				<div class ="jumbotron">
+        <div class ="jumbotron">
 
-					<h1>RPG Game</h1>
-					<p>This is an rpg game created by me. Adam Miclot.</p>
-					<button type="button" class="btn btn-primary startGame">Start the Game!</button>
+          <h1>RPG Game</h1>
+          <p>This is an rpg game created by me. Adam Miclot.</p>
+          <button type="button" class="btn btn-primary startGame">Start the Game!</button>
 
-				</div>
+        </div>
 
-			</div>
+      </div>
 
-		</div>
+    </div>
 
-		<div class = "row">
+    <div class = "row">
 
-			<div class = "col-xs-12">
+      <div class = "col-xs-12">
 
-				<div class="panel panel-default panelShow hidden">
-  					<div class="panel-heading textFix">Select Your Fighter to Begin!</div>
-  					<div class="panel-body">
+        <div class="panel panel-default panelShow hidden">
+            <div class="panel-heading textFix selectHeader">Select Your Fighter to Begin!</div>
+            <div class="panel-body">
 
-  						<div class="row">
+              <div class="row">
 
-  							<div class ="col-xs-6">
+                <div class ="col-xs-6">
 
-  								<div class = "panel panel-default">
+                  <div class = "panel panel-default fighterZeus">
 
-  									<button type="button" class="btn btn-info center-block buttonWidth">I select Zeus!</button>
+                    <button type="button" class="btn btn-info center-block buttonWidth selectZeus">I select Zeus!</button>
 
-  									<img src="assets/images/zeus.jpg" class="img-responsive img-thumbnail allImages center-block">
+                    <img src="assets/images/zeus.jpg" class="img-responsive img-thumbnail allImages center-block">
 
-  								</div>
+                  </div>
 
-  								<div class = "panel panel-default">
+                  <div class = "panel panel-default fighterOsiris">
 
-  									<button type="button" class="btn btn-info center-block buttonWidth">I select Osiris!</button>
+                    <button type="button" class="btn btn-info center-block buttonWidth selectOsiris">I select Osiris!</button>
 
-  									<img src="assets/images/osiris.jpg" class="img-responsive img-thumbnail allImages center-block">
+                    <img src="assets/images/osiris.jpg" class="img-responsive img-thumbnail allImages center-block">
 
-  								</div>
+                  </div>
 
-  								
-  							</div>
-  							<div class ="col-xs-6">
+                  
+                </div>
+                <div class ="col-xs-6">
 
-  								<div class = "panel panel-default">
+                  <div class = "panel panel-default fighterPoseidon">
 
-  									<button type="button" class="btn btn-info center-block buttonWidth">I select Poseidon!</button>
+                    <button type="button" class="btn btn-info center-block buttonWidth selectPoseidon">I select Poseidon!</button>
 
-  									<img src="assets/images/poseidon.jpg" class="img-responsive img-thumbnail allImages center-block">
-
-
-  								</div>
-
-  								<div class = "panel panel-default">
-
-  									<button type="button" class="btn btn-info center-block buttonWidth">I select Anubis!</button>
-
-  									<img src="assets/images/anibus.png" class="img-responsive img-thumbnail allImages center-block">
-
-  								</div>
-  								
-  							</div>
-  							
-
-  						</div>
-
-  					</div>
-				</div>
-
-			</div>
-
-		</div>
-
-	</div>
+                    <img src="assets/images/poseidon.jpg" class="img-responsive img-thumbnail allImages center-block">
 
 
+                  </div>
 
-	<script src="assets/javascript/game.js"></script>
+                  <div class = "panel panel-default fighterAnubis">
+
+                    <button type="button" class="btn btn-info center-block buttonWidth selectAnubis">I select Anubis!</button>
+
+                    <img src="assets/images/anibus.png" class="img-responsive img-thumbnail allImages center-block">
+
+                  </div>
+                  
+                </div>
+                
+
+              </div>
+
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class = "row battleScreen">
+
+      <div class = "col-xs-12">
+
+        <div class="panel panel-default panelShow2 hidden2">
+
+          <div class="panel-heading">
+
+          <h2 class ="textCenter">Let The Battle Begin!</h2>
+          <h4 class ="textCenter">Press Attack to begin battle</h4>
+
+          </div>
+          <div class="panel-body">
+
+            <div class ="row">
+
+                <div class ="col-xs-4 userFighter">
+
+                </div>
+
+                <div class ="col-xs-4">
+
+                  <h1 class ="textCenter">VS</h1>
+
+                </div>
+
+                <div class ="col-xs-4 cpuFighter">
+
+                </div>
+
+            </div>
+
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script src="assets/javascript/game.js"></script>
 
 
 </body>

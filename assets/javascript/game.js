@@ -1,9 +1,9 @@
  $(document).ready(function() {
 
- 	var zeusGod = new fighter('Zeus', 300, 80, 0, 'assets/images/zeus.jpg', "img-responsive img-thumbnail allImages center-block");
-    var posedionGod = new fighter('Posedion', 300, 80, 0, 'assets/images/posedion.jpg', "img-responsive img-thumbnail allImages center-block");
-    var anibusGod = new fighter('Anibus', 300, 80, 0, 'assets/images/anibus.jpg', "img-responsive img-thumbnail allImages center-block");
-    var osirisGod = new fighter('Oiris', 300, 80, 0, 'assets/images/osiris.jpg', "img-responsive img-thumbnail allImages center-block");
+ 	var zeusGod = new fighter('Zeus', 300, 80, 0);
+    var posedionGod = new fighter('Posedion', 300, 80, 0);
+    var anibusGod = new fighter('Anibus', 300, 80, 0);
+    var osirisGod = new fighter('Oiris', 300, 80, 0);
 
     var userSelectFighter = true;
 
@@ -30,13 +30,6 @@
    	console.log(osirisGod);
    	console.log(fighterArray);
 
-   	for (i=0; i < fighterArray.length; i++){
-   		var	newDiv = document.createElement('div');
-   		var newImg = document.createElement('img');
-
-
-
-   	}
 
     
     $(".startGame").on("click", function() {
@@ -46,6 +39,28 @@
     
       
     });
+
+    $(".selectZeus").on("click", function() {
+        $(".fighterZeus").appendTo('.userFighter');
+        $(".selectHeader").text("Choose Your Opponent!");
+        $(".selectOsiris").addClass('enemyButton');
+        $(".fighterOsiris").addClass('enemyFighter');
+
+      
+
+    });
+
+    $(document.body).on('click', '.enemyButton', function() {
+        $('.enemyFighter').appendTo('.cpuFighter');
+        $(".panelShow2").removeClass('hidden2');
+        $(".panelShow").addClass('hidden');
+
+    });
+
+
+
+
+
 
 
 	});

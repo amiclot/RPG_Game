@@ -20,6 +20,15 @@
 	display: none;
 }
 
+.hidden2{
+	display: none;
+}
+
 .img-thumbnail{
 	border: 0px;
+}
+
+.textCenter{
+	text-align: center;
+
 }
