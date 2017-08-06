@@ -9,11 +9,11 @@
 
     var fighterArray = [];
 
-    function fighter(name, hp, attackDmg, defense, imgSrc, imgClass){
+    function fighter(name, hp, attackDmg, counterDmg, imgSrc, imgClass){
     	this.name = name;
     	this.hp = hp;
     	this.attackDmg = attackDmg;
-    	this.defense = defense;
+    	this.counterDmg = counterDmg;
     	this.imgSrc = imgSrc;
     	this.imgClass = imgClass;
 
@@ -35,23 +35,95 @@
     $(".startGame").on("click", function() {
         $(".panelShow").removeClass('hidden');
         $(".startGameContainer").addClass('hidden');
+        $('.poseidonButton').addClass('selectPoseidon');
+        $('.osirisButton').addClass('selectOsiris');
+        $('.anubisButton').addClass('selectAnubis');
+        $('.zeusButton').addClass('selectZeus');
+
 
     
       
     });
 
-    $(".selectZeus").on("click", function() {
+    $(document.body).on('click', '.selectZeus', function() {
         $(".fighterZeus").appendTo('.userFighter');
         $(".selectHeader").text("Choose Your Opponent!");
-        $(".selectOsiris").addClass('enemyButton');
-        $(".fighterOsiris").addClass('enemyFighter');
+        $(".selectOsiris").addClass('enemyButton1');
+        $(".fighterOsiris").addClass('enemyFighter1');
+        $(".selectAnubis").addClass('enemyButton2');
+        $(".fighterAnubis").addClass('enemyFighter2');
+        $(".selectPoseidon").addClass('enemyButton3');
+        $(".fighterPoseidon").addClass('enemyFighter3');
+        $(".selectPoseidon").removeClass('selectPoseidon');
+        $(".selectOsiris").removeClass('selectOsiris');
+        $(".selectAnubis").removeClass('selectAnubis');
 
-      
 
     });
 
-    $(document.body).on('click', '.enemyButton', function() {
-        $('.enemyFighter').appendTo('.cpuFighter');
+    $(document.body).on('click', '.selectAnubis', function() {
+        $(".fighterAnubis").appendTo('.userFighter');
+        $(".selectHeader").text("Choose Your Opponent!");
+        $(".selectOsiris").addClass('enemyButton1');
+        $(".fighterOsiris").addClass('enemyFighter1');
+        $(".selectZeus").addClass('enemyButton2');
+        $(".fighterZeus").addClass('enemyFighter2');
+        $(".selectPoseidon").addClass('enemyButton3');
+        $(".fighterPoseidon").addClass('enemyFighter3');
+        $(".selectPoseidon").removeClass('selectPoseidon');
+        $(".selectOsiris").removeClass('selectOsiris');
+        $(".selectZeus").removeClass('selectZeus');
+
+    });
+
+    $(document.body).on('click', '.selectOsiris', function() {
+        $(".fighterOsiris").appendTo('.userFighter');
+        $(".selectHeader").text("Choose Your Opponent!");
+        $(".selectZeus").addClass('enemyButton1');
+        $(".fighterZeus").addClass('enemyFighter1');
+        $(".selectAnubis").addClass('enemyButton2');
+        $(".fighterAnubis").addClass('enemyFighter2');
+        $(".selectPoseidon").addClass('enemyButton3');
+        $(".fighterPoseidon").addClass('enemyFighter3');
+        $(".selectPoseidon").removeClass('selectPoseidon');
+        $(".selectZeus").removeClass('selectZeus');
+        $(".selectAnubis").removeClass('selectAnubis');
+
+    });
+
+    $(document.body).on('click', '.selectPoseidon', function() {
+        $(".fighterPoseidon").appendTo('.userFighter');
+        $(".selectHeader").text("Choose Your Opponent!");
+        $(".selectOsiris").addClass('enemyButton1');
+        $(".fighterOsiris").addClass('enemyFighter1');
+        $(".selectAnubis").addClass('enemyButton2');
+        $(".fighterAnubis").addClass('enemyFighter2');
+        $(".selectZeus").addClass('enemyButton3');
+        $(".fighterZeus").addClass('enemyFighter3');
+        $(".selectZeus").removeClass('selectZeus');
+        $(".selectOsiris").removeClass('selectOsiris');
+        $(".selectAnubis").removeClass('selectAnubis');
+
+    });
+
+
+
+    $(document.body).on('click', '.enemyButton1', function() {
+        $('.enemyFighter1').appendTo('.cpuFighter');
+        $(".panelShow2").removeClass('hidden2');
+        $(".panelShow").addClass('hidden');
+
+    });
+
+    $(document.body).on('click', '.enemyButton2', function() {
+        $('.enemyFighter2').appendTo('.cpuFighter');
+        $(".panelShow2").removeClass('hidden2');
+        $(".panelShow").addClass('hidden');
+
+    });
+
+    $(document.body).on('click', '.enemyButton3', function() {
+        $('.enemyFighter3').appendTo('.cpuFighter');
         $(".panelShow2").removeClass('hidden2');
         $(".panelShow").addClass('hidden');
 
@@ -59,6 +131,10 @@
 
 
 
+
+//var hasUserSelectedFighter = false;
+
+//if 
 
 
 
