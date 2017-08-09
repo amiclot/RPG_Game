@@ -15,9 +15,9 @@
 
         <div class ="jumbotron">
 
-          <h1>RPG Game</h1>
-          <p>This is an rpg game created by me. Adam Miclot.</p>
-          <button type="button" class="btn btn-primary startGame">Start the Game!</button>
+          <h1 class="textCenter">Battle Gods</h1>
+          <p class="textCenter">'We make war that we may live in peace.'</p>
+          <button type="button" class="btn btn-primary startGame center-block">Start the Game!</button>
 
         </div>
 
@@ -37,19 +37,32 @@
 
                 <div class ="col-xs-6">
 
-                  <div class = "panel panel-default fighterZeus">
+                  <div class = "panel panel-default">
 
                     <button type="button" class="btn btn-info center-block buttonWidth zeusButton">I select Zeus!</button>
 
-                    <img src="assets/images/zeus.jpg" class="img-responsive img-thumbnail allImages center-block">
+                    <div class="panel panel-default fighterZeus">
+
+                      <h3 class="textCenter">HP: <span class = "ZeusHP"></span></h3>
+
+                      <img src="assets/images/zeus.jpg" class="img-responsive img-thumbnail allImages center-block zeusPic fighterData">
+
+                    </div>
+
 
                   </div>
 
-                  <div class = "panel panel-default fighterOsiris">
+                  <div class = "panel panel-default">
 
                     <button type="button" class="btn btn-info center-block buttonWidth osirisButton">I select Osiris!</button>
 
-                    <img src="assets/images/osiris.jpg" class="img-responsive img-thumbnail allImages center-block">
+                    <div class = "panel panel-default fighterOsiris">
+
+                      <h3 class="textCenter">HP: <span class = "OsirisHP"></span></h3>
+
+                      <img src="assets/images/osiris.jpg" class="img-responsive img-thumbnail allImages center-block osirisPic">
+
+                    </div>
 
                   </div>
 
@@ -57,20 +70,32 @@
                 </div>
                 <div class ="col-xs-6">
 
-                  <div class = "panel panel-default fighterPoseidon">
+                  <div class = "panel panel-default">
 
                     <button type="button" class="btn btn-info center-block buttonWidth poseidonButton">I select Poseidon!</button>
 
-                    <img src="assets/images/poseidon.jpg" class="img-responsive img-thumbnail allImages center-block">
+                    <div class="panel panel-default fighterPoseidon">
+
+                      <h3 class="textCenter">HP: <span class = "PoseidonHP"></span></h3>
+
+                      <img src="assets/images/poseidon.jpg" class="img-responsive img-thumbnail allImages center-block poseidonPic">
+
+                    </div>
 
 
                   </div>
 
-                  <div class = "panel panel-default fighterAnubis">
+                  <div class = "panel panel-default">
 
                     <button type="button" class="btn btn-info center-block buttonWidth anubisButton">I select Anubis!</button>
 
-                    <img src="assets/images/anibus.png" class="img-responsive img-thumbnail allImages center-block">
+                    <div class="panel panel-default fighterAnubis">
+
+                      <h3 class="textCenter">HP: <span class = "AnubisHP"></span></h3>
+
+                      <img src="assets/images/anibus.png" class="img-responsive img-thumbnail allImages center-block anibusPic">
+
+                    </div>
 
                   </div>
                   
@@ -95,16 +120,19 @@
           <div class="panel-heading">
 
           <h2 class ="textCenter">Let The Battle Begin!</h2>
-          <h4 class ="textCenter">Press Attack to begin battle</h4>
+
+          <button type="button" class="btn btn-info center-block buttonWidth startFight">Start Fight!</button>
 
           </div>
           <div class="panel-body">
 
             <div class ="row">
 
-                <div class ="col-xs-4 userFighter">
+                <section class ="col-xs-4 userFighter">
 
-                </div>
+                <button type="button" class="btn btn-info center-block buttonWidth attackButton">Attack!</button>
+
+                </section>
 
                 <div class ="col-xs-4">
 
@@ -112,9 +140,9 @@
 
                 </div>
 
-                <div class ="col-xs-4 cpuFighter">
+                <article class ="col-xs-4 cpuFighter">
 
-                </div>
+                </article>
 
             </div>
 
